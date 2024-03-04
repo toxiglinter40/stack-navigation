@@ -7,11 +7,12 @@ function HomeScreen() {
   return (
     <View  style={styles.container}>
       <view style={styles.container1}>
-      <Image style={{width: 290, height: 290}}  source={require('./assets/futebol.png')}  />
+      <Image style={{width: 260, height: 260}}  source={require('./assets/futebol.png')}  />
       <button style={styles.button1}>futebol</button>
       <Image source={require('./assets/motogp.png')} style={styles.img2} />
       <button  style={styles.button2}>motogp</button>
-      <Image style={{width: 290, height: 290}}  source={require('./assets/futebol.png')}  />
+      <Image style={{width: 260, height: 260}}  source={require('./assets/futsal.png')}  />
+      <button  style={styles.button3}>futsal</button>
       </view>
     </View>
   );
@@ -64,7 +65,14 @@ const styles = StyleSheet.create({
     borderRadius: '5px',
   },
   img2:{
-    maxHeight: '290px',
-    maxWidth: '290px',
+    maxHeight: '260px',
+    maxWidth: '260px',
   },
+  button3:{
+    backgroundColor: 'gray',
+    border: '25px',
+    whidth: 20,
+    height: 20,
+    borderRadius: '5px',
+  }
 });
