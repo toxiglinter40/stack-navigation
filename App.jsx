@@ -1,12 +1,18 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text></Text>
+    <View  style={styles.container}>
+      <view style={styles.container1}>
+      <Image style={{width: 290, height: 290}}  source={require('./assets/futebol.png')}  />
+      <button style={styles.button1}>futebol</button>
+      <Image source={require('./assets/motogp.png')} style={styles.img2} />
+      <button  style={styles.button2}>motogp</button>
+      <Image style={{width: 290, height: 290}}  source={require('./assets/futebol.png')}  />
+      </view>
     </View>
   );
 }
@@ -25,3 +31,40 @@ function App() {
 
 export default App;
 
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'beige',
+    width: '100%',
+    height: '100%',
+  },
+  img1: {
+    maxHeight: '290px',
+    maxWidth: '290px',
+  },
+  container1: {
+    backgroundColor: 'beige',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    width: '100%',
+    height: '100%',
+  },
+  button1:{
+    backgroundColor: 'gray',
+    border: '25px',
+    whidth: '20px',
+    height: '20px',
+    borderRadius: '5px',
+  },
+  button2:{
+    backgroundColor: 'gray',
+    border: '25px',
+    whidth: '20px',
+    height: '20px',
+    borderRadius: '5px',
+  },
+  img2:{
+    maxHeight: '290px',
+    maxWidth: '290px',
+  },
+});
